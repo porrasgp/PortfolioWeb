@@ -1,0 +1,401 @@
+/* HEAD CONTAINER */
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding:0;
+}
+
+header { 
+	background: linear-gradient(270deg, #203C73, #26A6A6 100%);
+}
+
+body{
+    text-align: center;
+    font-family: Raleway;
+}
+
+section{
+    letter-spacing: 2px;
+    overflow: hidden;
+    width: 100%;
+}
+
+i{
+    color: rgba(71, 255, 118,0.85);
+    font-size: 2em;
+    padding-bottom: 10px;
+}
+li i {
+    color: rgb(255, 174, 33);
+    font-size: 2em;
+    padding-left: 3px;
+}
+
+.container{
+    width: 100vw;
+    height: 100vh;
+    font-size: 32px;
+    color: #fff;
+    line-height: 36pt;
+}
+.container #name{
+    color:rgb(38, 255, 56);
+}
+.container .button{
+    border: 2px solid #fff;
+    padding: 10px;
+    margin: 20px auto;
+    font-size: 0.8em;
+    cursor: pointer;
+    transition: all 0.5s ease-out;
+}
+.container .button:hover{
+    background-color: rgb(255, 174, 33);
+    border-color: rgb(255, 174, 33);
+    color:  rgb(29, 47, 77);
+}
+
+.button:hover .fa-angle-down{
+    transform: rotate(-90deg);
+    transition: 0.5s;
+}
+
+.fa-angle-down{
+    font-size: 1em;
+    padding: 0 5px;
+    vertical-align: baseline;
+}
+
+
+.flex{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.flex .intro{
+    z-index: 2;
+}
+
+#home {
+    background-color: rgb(29, 47, 77);
+    height: 100vh;
+}
+
+/* NAV BAR */
+
+nav{
+    height: 50px;
+    background-color: rgb(56, 71, 96);
+    z-index: 99;
+    border-bottom: solid 2px rgb(38, 255, 56);
+}
+nav a {
+    padding: 12px;
+    color: #fff;
+    text-decoration: none;
+    font-size: 17px;
+    line-height: 18pt;
+    display: inline-block;
+}
+nav a:hover{
+    transition: 0.1s ease;
+    color:rgb(255, 174, 33);
+}
+
+.sticky{
+    position: sticky;
+    top: 0;
+    width: 100%;
+}
+
+.nav-links{
+    height:100%;
+}
+
+.wrapper{
+    width: 60%;
+    margin: 0 auto;
+}
+
+.wrap {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    height: 100%;
+}
+
+/* ABOUT SECTION */
+
+#about{
+    line-height: 18pt;
+    padding: 90px 0 50px;
+}
+
+#education{
+    line-height: 18pt;
+    padding: 40px 0 50px;
+}
+
+#language {
+	line-height: 18pt;
+    padding: 70px 0 70px;
+}
+
+.header {
+    letter-spacing: normal;
+    font-size: 30pt;
+    color: #444649;
+    text-align: center;
+    margin-bottom: 100px;
+}
+.header::after{
+    content:'';
+    display:block;
+    margin-top: 12px;
+    border: 1px solid rgb(255, 174, 33, 0.8);
+}
+
+.cards {
+    display: flex;
+    justify-content: space-between;
+    width:100%;
+    margin: 0 auto;
+}
+
+.card{
+    margin: 0 10px;
+    color: #616161;
+    width: 100%;
+}
+		
+.zoom:hover {
+	position: none;
+    top: 75px;
+    padding: 10px;
+}
+
+		
+.label{
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 30px;
+    font-weight: 700;
+}
+
+.desc{
+    font-size: 14px;
+}
+
+/* SKILLS SECTION */
+
+#skills{
+    line-height: 18pt;
+    padding: 70px 0px 30px;
+}
+
+#skills-text{
+    display: inline-block;
+}
+
+ul{
+    list-style: none;
+}
+
+/* PROJECTS SECTION */
+
+#portfolio{
+    line-height: 18pt;
+    padding: 80px 0px 50px;
+    background: linear-gradient(#fff, #869bbf,#4e6080,#384760);
+}
+
+.gallery {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: space-around;
+    flex-wrap: wrap;
+ }
+
+ .block{
+     display: flex;
+     direction: row;
+     justify-content: flex-start;
+     width: 100%;
+ }
+
+ .project-image{
+    max-width: 500px;
+    width: 400px;
+    height: auto;
+    margin-bottom: 100px;
+    margin-right: 20px;
+ }
+
+.project-image a img{
+    width: 400px;
+    height: 300px;
+    box-shadow: -5px 5px 15px black;
+}
+.project-image a img:hover{
+    transform: translate(-15px, -5px);
+}
+
+h5{
+    padding-bottom: 5px;
+    font-size: 17px;
+}
+
+.project-info{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    align-items: stretch;
+    text-align: left;   
+    margin-left: 10px;
+}
+.project-section{
+    padding: 0 0 15px 15px;
+    line-height: 1.6;
+}
+
+.float{
+    display: inline-flex;
+    float: left;
+}
+
+.tech{
+    margin-right: 60px;
+}
+
+.tech-list{
+    display:flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    text-align: left;
+    align-items: baseline;
+}
+
+/* CONTACT SECTION */
+
+#contact{
+    padding-bottom: 50px;
+}
+
+.contact-section{
+    margin: 30px 0px 50px;
+    font-size: 26px;
+    color: #384760;
+    text-align: center;
+    padding-bottom: 15px;
+    border-bottom:  1px solid #384760;
+}
+
+#email-container{
+    padding: 5px 0 20px;
+}
+
+#email{
+    text-decoration: none;
+    color: #384760;
+    font-size: 15px;
+}
+
+.contact-links i{
+    padding: 10px 15px;
+    font-size: 2.5em;
+}
+
+a i:hover{
+    color: rgb(255, 174, 33);
+    transition: 0.5s ease;
+    cursor: pointer;
+}
+
+/* FOOTER SECTION */
+
+footer{
+    background-color: #869bbf;
+}
+
+.footnote{
+    padding: 10px 0 30px;
+    color: #fff;
+}
+
+.fa-angle-double-up{
+    transform: translateY(-17px);
+    background: #384760;
+    padding: 3px 10px;
+    border-radius: 5%;
+}
+
+.highlight {
+    color: rgb(38, 255, 56);
+	
+}
+
+@media screen and (max-width: 910px){
+
+    .wrapper{
+        width:80%;
+    }
+
+    .header{
+        margin-bottom: 60px;
+    }
+
+    #skills{
+        line-height: 18pt;
+        padding: 50px 0 50px;
+    }
+
+    .cards{
+        flex-wrap: wrap;
+        justify-content: center;
+        align-content: space-around;
+    }
+
+    .card{
+        width:40%;
+        margin: 0 15px 40px 15px;
+    }
+
+    .block{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .project-info{
+        width: 60%;
+        margin-bottom: 50px;
+    }
+
+    .project-image{
+        margin: 20px 0 50px;
+    }
+}
+
+@media screen and (max-width: 576px){
+
+    .card{
+        width: 70%;
+    }
+
+    .project-info{
+        width: 80%;
+    }
+
+    #portfolio{
+        padding-top: 50px;
+    }
+
+}
+
+
+
+
+
