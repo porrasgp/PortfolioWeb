@@ -1,366 +1,110 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link href="./Portfolio.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Raleway:300,400,500,600,700&display=swap" rel="stylesheet">
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <script type="text/javascript" src="Portfolio.js" defer></script>
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-	<script type="text/javascript"> (function() { var css = document.createElement('link'); css.href = 'https://use.fontawesome.com/releases/v5.1.0/css/all.css'; css.rel = 'stylesheet'; css.type = 'text/css'; document.getElementsByTagName('head')[0].appendChild(css); })(); </script>
-
-    <title>Giovanni Solano Porras</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Data Scientist - Secure Login</title>
+  <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f3f4f6;
+    }
+    .container {
+      max-width: 800px; /* Adjusted for better readability */
+      margin: auto; /* Center the container */
+      padding: 20px; /* Increased padding for better spacing */
+    }
+    .title {
+      font-size: 24px;
+      font-weight: bold;
+      color: #4b5563;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+    .button {
+      display: block;
+      width: 100%;
+      padding: 10px;
+      background-color: #6d28d9;
+      color: #ffffff;
+      border-radius: 5px;
+      border: none;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+    .button:hover {
+      background-color: #7c3aed;
+    }
+    .wallet-info {
+      font-size: 16px;
+      color: #6b7280;
+      text-align: center;
+      margin-top: 20px;
+    }
+    .metamask-icon {
+      display: block;
+      width: 175px; /* Increase width for bigger icon */
+      height: auto; /* Maintain aspect ratio */
+      margin: auto; /* Center the icon */
+      margin-top: 30px; /* Adjust distance from the content */
+    }
+    .justified-text {
+      text-align: justify; /* Justify the text */
+    }
+  </style>
 </head>
-<body>
-    <!--HOME-->
-    <section id="home"> 
-	
-       <!-- <div id="particlesJS"><canvas class="particles-js-canvas-el" width="1684" height="200" style="width: 100%; height: 100%;"></canvas></div> --> 
-        <header class="container flex">
-		
-			<div class="flex intro">
-                <div class="text">Hello, I'm <span id="name">Giovanni Solano Porras</span>
-				<br> Jr. Data Science
-			    </div>
-					<div class="button" id="box-btn">
-						<span id="view-work">Check my work</span>
-							<i class="fas fa-angle-down" ></i>
-					</div>
-            </div>
-        </header>
-    </section>
-    <!--END OF HOME-->
 
-    <!--NAVIGATION-->
-    <nav class="sticky">
-        <div class="nav-links">
-            <div class="wrap wrapper">
-                <div class="page-link link1"><a href="#home">Home</a></div>
-                <div class="page-link link2"><a href="#about">About</a></div>
-                <div class="page-link link2"><a href="#skills">Skills</a></div>
-                <div class="page-link link3"><a href="#portfolio">Portfolio</a></div>
-				<div class="page-link link4"><a href="#education">Education</a></div>
-				<div class="page-link link4"><a href="https://medium.com/@giovannisolanoporras" target="_blank" >Blog</a></div>
-                <div class="page-link link4"><a href="https://es.goldensparrowequity.com/" target="_blank">Investment</a></div>
-				<div class="page-link link4"><a href="#contact">Contact</a></div>
-            </div>
-        </div>
-    </nav>
-    <!--END OF NAVIGATION-->
-	
-    <!--ABOUT-->
-    <section id="about">
-        <div class="flex wrapper">
-            <div class="header" id="about-text">About</div>
-            <div class="cards ">
-                <div class="card col1" data-aos="fade-up-right">
-                    <i class="fas fa-project-diagram"></i>
-                    <div class="label" >Data Science</div>
-                    <div class="desc">Passionate about Data Science, Machine Learning and Daviz.</div>
-                </div>
-                <div class="card col2" data-aos="fade-down-right">
-                    <i class="fas fa-globe"></i>
-                    <div class="label">Data Visualization</div>
-                    <div class="desc">Love to develope Data Visualization focused on solving real world problems using; Power BI, Tableau and Python frameworks</div>
-                </div>
-                <div class="card col3" data-aos="fade-up-left">
-                    <i class="fas fa-lightbulb icons"></i>
-                    <div class="label">Self-starter</div>
-                    <div class="desc">Self-motivated every day to learn new skills and technologies.</div>
-                </div>
-                <div class="card col4" data-aos="fade-down-left">
-                        <i class="fas fa-leaf"></i>
-                    <div class="label">Costa Rica Based</div>
-                    <div class="desc">Rooted in Central America's most prominent technological hub.</div>
-                </div>
-            </div>
-    </div></section>
-    <!--END OF ABOUT-->
-	
-<!--EDUCATION-->
-    <section id="education">
-        <div class="flex wrapper">
-            <div class="header" id="about-text">Education</div>
-            <div class="cards">
-                <div class="card col1" data-aos="fade-up-right">
-                    <ul class= "zoom">
-                          <a href="https://www.carreras.una.ac.cr/relaciones-internacionales/" target="_blank"><img style= "width:60%;height:100%" src="Images/RRII.jpg"> </a></li>
-                    </ul>
-                    <div class="label">B.A International Affairs</div>
-                    <div class="desc">International Affairs is a social science that specializes in the study of relations between States, international organizations and other actors in the international arena.</div>
-                </div>
-				
-                <div class="card col2" data-aos="fade-down-right">
-                    <ul class= "zoom">
-                          <a href="https://ulead.ac.cr/es/carreras/bachilleratos/bachillerato-ingenieria-en-ciencia-de-datos" target="_blank"><img style= "width:60%;height:100%" src="Images/LEAD.jpg"></a></li>
-                    </ul >
-                    <div class="label">B.S Data Science</div>
-                    <div class="desc">Data scientists draw on knowledge of programming, math, statistics, and business. They extract valuable information from massive, heterogeneous and high-dimensional data for decision making.</div>
-                </div>
-				
-                <div class="card col3" data-aos="fade-up-left">
-                    <ul class= "zoom">
-                          <a href="https://www.cupl.edu.cn/" target="_blank"><img style= "width:100%;height:100%" src="Images/CUPL.jpg"></a></li>
-                    </ul>
-                    <div class="label">中国政法大学 (CUPL)</div>
-                    <div class="desc">Two Semesters in Chinese language, where I studied; Speaking, Listening, Grammar, Culture and Characters Courses. </div>
-                </div>
-            </div>
-    </div></section>
-    <!--END OF EDUCATION-->	
-	
-	
-    <!--SKILLS-->
-    <section id="skills">
-        <div class="wrapper">
-            <div class="header" id="skills-text">Technologies</div>
-            <div class="cards">
-                <div class="card front" data-aos="zoom-in-right">
-                    <div class="label ">Front-End</div>
-                    <div class="desc">
-                        <ul>
-                            <!--Lista de tecnologias FE-->
-                            <li>HTML <i class="fab fa-html5"></i></li>
-                            <li>CSS <i class="fab fa-css3-alt"></i></li>
-                            <li>JavaScript ES6 <i class="fab fa-js"></i></li>
-                            <li>Dash| Plotly <i class="fab fa-python"></i></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="card back" data-aos="zoom-in-right" data-aos-delay="400">
-                    <div class="label">Data Science</div>
-                    <div class="desc">
-                        <ul>
-                           <!--Lista de tecnologias BE-->
-                            <li>Power BI <i class="far fa-chart-bar"></i></i></li>
-                            <li>Tableau <i class="fas fa-plus"></i></i></i></li>
-                            <li>Python <i class="fab fa-python"></i></li>
-                            <li>Java <i class="fab fa-java"></i></i></li>
-                            <li>SQL <i class="fas fa-database"></i></i></li>                                                
-                        </ul>
-                    </div>
-                </div>
-                <div class="card version" data-aos="zoom-in-left" data-aos-delay="800">
-                    <div class="label ">Version Control</div>
-                    <div class="desc">
-                        <ul>			
-                            <!--Lista de Librerias manejadas-->
-                            <li>Git <i class="fab fa-git-square"></i></li>
-                            <li>Github <i class="fab fa-github-square"></i></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="card frameworks" data-aos="zoom-in-left" data-aos-delay="1200">
-                        <div class="label ">Certifications</div>
-                        <div class="desc">
-                            <ul>
-                                <!--Lista de Librerias manejadas-->
-                                <li>Certified Project Practitioner <i class="far fa-registered"></i></i></li>
-                                <li>Team Kanban Practitioner <i class="far fa-registered"></i></i></li>
-                            </ul>
-                        </div>
-                    </div>
-            </div>
-        </div>
-    </section>
-	
-	 <!--LANGUAGES-->
-    <section id="language">
-        <div class="wrapper">
-            <div class="header" id="skills-text">Languages</div>
-            <div class="cards">
-			<!--SPANISH-->
-                <div class="card front" data-aos="zoom-in-right" data-aos-delay="200">
-                    <div class="label ">Spanish</div>
-                    <div class="desc">
-                        <ul class= "zoom">
-                          <li> <img <img style= "width:100%;height:100%" src="Images/cr.jpg"></li>
-                        </ul>
-                    </div>
-                </div>
-				<!--ENGLISH-->
-                <div class="card back" data-aos="zoom-in-right" data-aos-delay="400">
-                    <div class="label">English</div>
-                    <div class="desc">
-                        <ul class= "zoom">
-                           
-                            <li> <img style= "width:100%;height:100%" src="Images/us.jpg"></li>                        
-                        </ul>
-                    </div>
-                </div>
-				<!--CHINESE-->
-                <div class="card version" data-aos="zoom-in-left" data-aos-delay="800">
-                    <div class="label ">Chinese</div>
-                    <div class="desc">
-                        <ul class= "zoom">                            
-                            <li> <img <img style= "width:100%;height:100%" src="Images/cn.jpg"> </li>
-                        </ul>
-                    </div>
-                </div>
-				<!--ITALIAN-->
-                <div class="card frameworks" data-aos="zoom-in-left" data-aos-delay="1200">
-                        <div class="label ">Italian</div>
-                        <div class="desc">
-                            <ul class= "zoom">
-                                
-                                <li> <img style= "width:100%;height:100%" src="Images/it.jpg"></li>
-                            </ul>
-                        </div>
-                    </div>
-            </div>
-        </div>
-    </section>
-    <!--END OF LANGUAGES-->
-    
-	
-	<!--PROJECTS-->
-    <section id="portfolio">
-        <div class="wrapper flex">
-            <div class="header" id="projects">Projects</div>
-            <div class="gallery">
-                <div class="block bk-1">
-                    <div class="project-image">
-                        <a href="https://github.com/porrasgp" target="_blank">
-                            <img src="Images/PowerBI.svg" alt="" data-aos="flip-up" data-aos-easing="ease-in" data-aos-delay="100">
-                        </a>
-                    </div>                   
-                    <div class="project-info">
-                        <div class="project-section">
-                            <h5>Power BI</h5>
-                            <p>Power BI is an interactive data visualization software developed by Microsoft with primary focus on business intelligence. It is part of the Microsoft Power Platform.</p>
-                        </div>
-                        <div class="project-section">
-                            <div class="float">
-                                <div class="tech">
-                                    <h5>Technologies</h5>
-                                    <div class="tech-list">
-                                        <ul>
-                                            <li>- Prepare the data</li>
-                                            <li>- Visualize the data</li>
-                                            <li>- Model the data</li>
-                                            <li>- Analyze the data</li>
-                                            <li>- Deploy and maintain deliverables</li>
-                                        </ul>
-                                    </div>   
-                                </div>                                
-                                <div class="project-code">
-                                    <h5>Code</h5>
-                                    <a href="https://www.youtube.com/watch?v=DOeL_8cjpU4" target="_blank"><i class="fab fa-github"></i></a>  
-                                </div> 
-                            </div>                                                                     
-                        </div>                          
-                    </div>
-                </div>
-                <div class="block bk-2">
-                    <div class="project-image" >
-                        <a href="https://public.tableau.com/app/profile/giovanni5308" target="_blank">
-                            <img src="Images/tableau-software.svg" alt="" data-aos="flip-up" data-aos-easing="ease-in" data-aos-delay="100">
-                        </a>
-                    </div>                    
-                    <div class="project-info">
-                        <div class="project-section">
-                            <h5>Tableau</h5>
-                            <p>Tableau Software is an American interactive data visualization software company focused on business intelligence.</p>
-                        </div>
-                        <div class="project-section">
-                            <div class="float">
-                                <div class="tech">
-                                    <h5>Technologies</h5>
-                                    <div class="tech-list">
-                                        <ul>
-                                            <li>- Groups and Sets</li>
-                                            <li>- Calculated fields and Parameters</li>
-                                            <li>- Data Pre + Analytics</li>
-                                            <li>- Table Calculations</li>
-                                            <li>- Level of Detail (LOD)</li>
-                                            <li>- Mapping Techniques</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="project-code">
-                                        <h5>Code</h5>
-                                        <a href="https://public.tableau.com/app/profile/giovanni5308" target="_blank"><i class="fab fa-github"></i></a>
-                                </div>    
-                            </div>                            
-                        </div>                       
-                    </div>
-                </div>
-                <div class="block bk-3">
-                    <div class="project-image">
-                        <a href="https://github.com/porrasgp" target="_blank">
-                            <img src="Images/sql.svg" data-aos="flip-up" data-aos-easing="ease-in" data-aos-delay="100">
-                        </a>
-                    </div>
-                    <div class="project-info">
-                        <div class="project-section">
-                            <h5>Structured Query Language (SQL)</h5>
-                            <p>SQL is a domain-specific language used in programming and designed for managing data held in a relational database management system (RDBMS), or for stream processing in a relational data stream management system (RDSMS).</p>
-                        </div>
-                        <div class="project-section">
-                            <div class="float">
-                                <div class="tech">
-                                    <h5>Technologies</h5>
-                                    <div class="tech-list">
-                                        <ul>
-                                            <li>- CRUD Commands</li>
-                                            <li>- Commands (DDL,DQL,DML,DCL)</li>
-                                            <li>- Relational Keys</li>
-                                            <li>- Subqueries</li>
-                                            <li>- Joins</li>
-                                            <li>- Triggers</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="project-code">
-                                        <h5>Code</h5>
-                                        <a href="https://github.com/porrasgp" target="_blank"><i class="fab fa-github"></i></a>
-                                </div>
-                            </div>                            
-                        </div>                         
-                    </div>       
-                </div>
-            </div>
-        </div>
-    </section>
-    <!--END OF PROJECTS-->
+<body class="flex justify-center items-center h-screen">
+  <div class="container p-4 bg-white rounded-lg shadow-lg">
+    <h1 class="title">Giovanni Solano - Data Scientist</h1>
+    <p class="justified-text"> My ultimate goal as a data scientist is to make a positive impact on businesses and society through data-driven insights and solutions. </p> 
+    <br>
+    <p class="justified-text"> I am eager to take on new challenges and leverage my skills to contribute to projects that address real-world problems.</p> 
+    <br>
+    <p class="justified-text">Let's work together to unlock the potential of data and drive meaningful change!</p>
+    <br>
+    <p class="justified-text"> Thank you for visiting my profile, and I look forward to connecting with you!</p>  
+    <br>
+    <button id='loginButton' class="button">Login with MetaMask</button>
+    <p id='userWallet' class='wallet-info'></p>
+    <img src="Images/metamask-logo.png" alt="MetaMask Logo" class="metamask-icon"> <!-- Add your MetaMask icon image -->
+  </div>
 
-    <!--CONTACT-->
-    <section id="contact">
-        <!--SVG FOR SLANTED BG-->
-        <svg preserveAspectRatio="none" viewBox="0 0 100 102" height="75" width="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" class="svgcolor-light">
-            <path d="M0 0 L50 100 L100 0 Z" fill="rgb(56, 71, 96)" stroke="white"></path>
-        </svg>
-        <!--END OF SVG-->
+  <script>
+    window.userWalletAddress = null;
+    const loginButton = document.getElementById('loginButton');
+    const userWallet = document.getElementById('userWallet');
 
-        <div class="wrapper flex">
-            <div class="contact-section">Contact</div>
-            <div id="email-container"><a href="mailto:gps_30rd@@hotmail.com" id="email">Email: gps_30rd@hotmail.com</a></div>
-            <div class="contact-links">
-                <a href="https://github.com/porrasgp" target="_blank" ><i class="fab fa-github"></i></a>
-                <a href="https://www.linkedin.com/in/porrasgp/" target="_blank" ><i class="fab fa-linkedin icons"></i></a>
-                <a href="Images/Giovanni, Solano CV.pdf" target="_blank" ><i class="fas fa-file-pdf"></i></a>
-            </div>
-        </div>
-    </section>
-    <!--END OF CONTACT-->
+    function toggleButton() {
+      if (!window.ethereum) {
+        loginButton.innerText = 'MetaMask not detected';
+        loginButton.classList.remove('button');
+        loginButton.classList.add('bg-gray-300', 'text-gray-600', 'cursor-not-allowed');
+        loginButton.disabled = true;
+        return false;
+      }
+      loginButton.addEventListener('click', loginWithMetaMask);
+    }
 
-    <!--FOOTER-->
-    <footer>
-        <a href="#home"><i class="fas fa-angle-double-up"></i></a>
-        <div class="info-box">
-            <div class="footnote">Giovanni Solano Porras <span class="highlight">©2019</span></div>
-        </div>
-    </footer>
-    <!--END OF FOOTER-->
+    async function loginWithMetaMask() {
+      try {
+        const accounts = await window.ethereum.request({ method: 'eth_requestAccounts' });
+        if (accounts.length > 0) {
+          window.userWalletAddress = accounts[0];
+          userWallet.innerText = 'Wallet Address: ' + window.userWalletAddress;
+          window.location.href = 'https://porrasgp.github.io/PortfolioWeb/'; // Update with your actual secure dashboard URL
+        }
+      } catch (error) {
+        console.error('Error:', error.message);
+      }
+    }
 
-   <script>
-       AOS.init({
-           duration: 1200
-       })
-   </script> 
+    window.addEventListener('DOMContentLoaded', () => {
+      toggleButton();
+    });
+  </script>
 </body>
+
 </html>
-
-
