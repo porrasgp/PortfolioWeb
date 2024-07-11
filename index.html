@@ -12,9 +12,9 @@
       background-color: #f3f4f6;
     }
     .container {
-      max-width: 800px; /* Adjusted for better readability */
-      margin: auto; /* Center the container */
-      padding: 20px; /* Increased padding for better spacing */
+      max-width: 800px;
+      margin: auto;
+      padding: 20px;
     }
     .title {
       font-size: 24px;
@@ -33,6 +33,7 @@
       border: none;
       cursor: pointer;
       transition: background-color 0.3s;
+      margin-bottom: 10px;
     }
     .button:hover {
       background-color: #7c3aed;
@@ -45,13 +46,13 @@
     }
     .metamask-icon {
       display: block;
-      width: 175px; /* Increase width for bigger icon */
-      height: auto; /* Maintain aspect ratio */
-      margin: auto; /* Center the icon */
-      margin-top: 30px; /* Adjust distance from the content */
+      width: 175px;
+      height: auto;
+      margin: auto;
+      margin-top: 30px;
     }
     .justified-text {
-      text-align: justify; /* Justify the text */
+      text-align: justify;
     }
   </style>
 </head>
@@ -59,45 +60,60 @@
 <body class="flex justify-center items-center h-screen">
   <div class="container p-4 bg-white rounded-lg shadow-lg">
     <h1 class="title">Giovanni Solano - Data Scientist</h1>
-    <p class="justified-text"> My ultimate goal as a data scientist is to make a positive impact on businesses and society through data-driven insights and solutions. </p> 
-    <br>
-    <p class="justified-text"> I am eager to take on new challenges and leverage my skills to contribute to projects that address real-world problems.</p> 
-    <br>
+    <p class="justified-text">My ultimate goal as a data scientist is to make a positive impact on businesses and society through data-driven insights and solutions.</p> 
+    <p class="justified-text">I am eager to take on new challenges and leverage my skills to contribute to projects that address real-world problems.</p> 
     <p class="justified-text">Let's work together to unlock the potential of data and drive meaningful change!</p>
-    <br>
-    <p class="justified-text"> Thank you for visiting my profile, and I look forward to connecting with you!</p>  
-    <br>
-    <button id='loginButton' class="button">Login with MetaMask</button>
+    <p class="justified-text">Thank you for visiting my profile, and I look forward to connecting with you!</p>  
+    
+    <!-- Login buttons -->
+    <button id='loginMetaMaskButton' class="button">Login with MetaMask</button>
+    <button id='loginAlternativeButton' class="button bg-gray-300 text-gray-600">Login without MetaMask</button>
+    
+    <!-- Wallet info -->
     <p id='userWallet' class='wallet-info'></p>
-    <img src="Images/metamask-logo.png" alt="MetaMask Logo" class="metamask-icon"> <!-- Add your MetaMask icon image -->
+    
+    <!-- MetaMask logo -->
+    <img src="Images/metamask-logo.png" alt="MetaMask Logo" class="metamask-icon">
   </div>
 
   <script>
     window.userWalletAddress = null;
-    const loginButton = document.getElementById('loginButton');
+    const loginMetaMaskButton = document.getElementById('loginMetaMaskButton');
+    const loginAlternativeButton = document.getElementById('loginAlternativeButton');
     const userWallet = document.getElementById('userWallet');
 
-    function toggleButton() {
-      if (!window.ethereum) {
-        loginButton.innerText = 'MetaMask not detected';
-        loginButton.classList.remove('button');
-        loginButton.classList.add('bg-gray-300', 'text-gray-600', 'cursor-not-allowed');
-        loginButton.disabled = true;
-        return false;
-      }
-      loginButton.addEventListener('click', loginWithMetaMask);
-    }
-
+    // Function to handle MetaMask login
     async function loginWithMetaMask() {
       try {
         const accounts = await window.ethereum.request({ method: 'eth_requestAccounts' });
         if (accounts.length > 0) {
           window.userWalletAddress = accounts[0];
           userWallet.innerText = 'Wallet Address: ' + window.userWalletAddress;
-          window.location.href = 'main.html'; // Update with your actual secure dashboard URL
+          window.location.href = 'main.html'; // Redirect to your secure dashboard
         }
       } catch (error) {
         console.error('Error:', error.message);
+      }
+    }
+
+    // Function to handle alternative login
+    function loginWithoutMetaMask() {
+      // Implement your alternative login logic here
+      userWallet.innerText = 'Alternative login method used';
+      window.location.href = 'main.html'; // Redirect to your secure dashboard
+    }
+
+    // Event listeners for buttons
+    loginMetaMaskButton.addEventListener('click', loginWithMetaMask);
+    loginAlternativeButton.addEventListener('click', loginWithoutMetaMask);
+
+    // Check for MetaMask presence
+    function toggleButton() {
+      if (!window.ethereum) {
+        loginMetaMaskButton.innerText = 'MetaMask not detected';
+        loginMetaMaskButton.classList.remove('button');
+        loginMetaMaskButton.classList.add('bg-gray-300', 'text-gray-600', 'cursor-not-allowed');
+        loginMetaMaskButton.disabled = true;
       }
     }
 
