@@ -100,14 +100,19 @@
     // Function to handle MetaMask login
     async function loginWithMetaMask() {
       try {
-        const accounts = await window.ethereum.request({ method: 'eth_requestAccounts' });
-        if (accounts.length > 0) {
-          window.userWalletAddress = accounts[0];
-          userWallet.innerText = 'Wallet Address: ' + window.userWalletAddress;
-          window.location.href = 'main.html'; // Redirect to your secure dashboard
+        if (typeof window.ethereum !== 'undefined') {
+          const accounts = await window.ethereum.request({ method: 'eth_requestAccounts' });
+          if (accounts.length > 0) {
+            window.userWalletAddress = accounts[0];
+            userWallet.innerText = 'Wallet Address: ' + window.userWalletAddress;
+            window.location.href = 'main.html'; // Redirect to your secure dashboard
+          }
+        } else {
+          throw new Error('MetaMask not detected');
         }
       } catch (error) {
         console.error('Error:', error.message);
+        userWallet.innerText = error.message;
       }
     }
 
@@ -122,18 +127,14 @@
     loginMetaMaskButton.addEventListener('click', loginWithMetaMask);
     loginAlternativeButton.addEventListener('click', loginWithoutMetaMask);
 
-    // Check for MetaMask presence
-    function toggleButton() {
-      if (!window.ethereum) {
+    // Check for MetaMask presence on page load
+    document.addEventListener('DOMContentLoaded', () => {
+      if (typeof window.ethereum === 'undefined') {
         loginMetaMaskButton.innerText = 'MetaMask not detected';
         loginMetaMaskButton.classList.remove('button');
         loginMetaMaskButton.classList.add('bg-gray-300', 'text-gray-600', 'cursor-not-allowed');
         loginMetaMaskButton.disabled = true;
       }
-    }
-
-    window.addEventListener('DOMContentLoaded', () => {
-      toggleButton();
     });
   </script>
 </body>
