@@ -38,6 +38,21 @@
     .button:hover {
       background-color: #7c3aed;
     }
+    .button-alt {
+      display: block;
+      width: 100%;
+      padding: 10px;
+      background-color: #4a5568;
+      color: #ffffff;
+      border-radius: 5px;
+      border: none;
+      cursor: pointer;
+      transition: background-color 0.3s;
+      margin-bottom: 10px;
+    }
+    .button-alt:hover {
+      background-color: #2d3748;
+    }
     .wallet-info {
       font-size: 16px;
       color: #6b7280;
@@ -67,7 +82,7 @@
     
     <!-- Login buttons -->
     <button id='loginMetaMaskButton' class="button">Login with MetaMask</button>
-    <button id='loginAlternativeButton' class="button bg-gray-300 text-gray-600">Login without MetaMask</button>
+    <button id='loginAlternativeButton' class="button-alt">Login without MetaMask</button>
     
     <!-- Wallet info -->
     <p id='userWallet' class='wallet-info'></p>
